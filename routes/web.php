@@ -87,3 +87,5 @@ Route::get('latihan1', function () {
 Route::get('websiteku', function () {
     return view('websiteku');
 });
+
+Route::get('perkalian','MahasiswaD@index');
