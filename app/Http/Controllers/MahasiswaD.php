@@ -12,4 +12,12 @@ class MahasiswaD extends Controller
         $c = 7 + 2;
         return "<h3> Hasil Perkalian: ". (string)$c . "</h3>";
     }
+    public function showBlog(){
+        $nama = "Silfia";
+        $alamat = "Mojokerto";
+        $umur = 19;
+        return view('blog', ['nama' => $nama, 'alamat' => $alamat, 'umur' => $umur]);
+
+    }
 }
+

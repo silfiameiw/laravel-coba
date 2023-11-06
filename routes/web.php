@@ -89,3 +89,4 @@ Route::get('websiteku', function () {
 });
 
 Route::get('perkalian','MahasiswaD@index');
+Route::get('show', 'App\Http\Controllers\MahasiswaD@showBlog');
