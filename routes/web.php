@@ -90,3 +90,35 @@ Route::get('websiteku', function () {
 
 Route::get('perkalian','MahasiswaD@index');
 Route::get('show', 'App\Http\Controllers\MahasiswaD@showBlog');
+
+use App\Http\Controllers\PegawaiController;
+
+
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
+Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiController::class, 'update']);
+Route::post('/pegawai/store', [PegawaiController::class, 'store']);
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
+
+
+// Route::get('/pegawai','PegawaiController@index');
+// Route::get('/pegawai/tambah','PegawaiController@tambah');
+// Route::post('/pegawai/store','PegawaiController@store');
+// Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+// Route::post('/pegawai/update','PegawaiController@update');
+// Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+
+// Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+// Route::post('pegawai/update','PegawaiController@update');
+// Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+// Route::get('/pegawai/tambah','PegawaiController@tambah');
+
+
+
+
+
+
+
+
