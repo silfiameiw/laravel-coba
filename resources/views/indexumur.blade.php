@@ -29,7 +29,13 @@
             <!-- kalau pake bootstrap, headernya jangan pakai td, tapi pakai th, kalau pakai td ngga kedetec!-->
 			<th>Nama</th>
 			<th>Jabatan</th>
-			<th>Umur</th>
+			<th
+            {{-- @if ()
+            class="bg-danger text-warnin"
+            @else ()
+            @endif --}}
+
+            >Umur</th>
 			<th>Alamat</th>
 			<th>Opsi</th>
 		</tr>
@@ -40,9 +46,9 @@
 			<td
 
             @if($p->pegawai_umur <= 30)
-                class="bg-dark text-white"
+                class="bg-black text-white"
             @else
-                class="bg-danger text-white"
+                class="bg-red text-white"
             @endif
 
             >{{ $p->pegawai_umur }}</td>

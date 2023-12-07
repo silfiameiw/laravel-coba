@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <!-- Brand -->
             <a class="navbar-brand" href="#">Siflia Mei Wulandari - 5026221073</a>
@@ -42,16 +42,17 @@
             </ul>
           </nav>
         <hr />
-        <br />
-        <br />
+
 
         <!-- bagian judul halaman blog -->
+        <div class="container">
         <h3> @yield('judul_halaman') </h3>
 
         @yield('header')
 
         @yield('isihalaman')
         <!-- bagian konten blog -->
+
         @yield('konten')
 
 

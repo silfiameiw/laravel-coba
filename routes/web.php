@@ -103,6 +103,17 @@ Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
 Route::get('/pegawai/view/{id}', [PegawaiController::class, 'view']);
 
+use App\Http\Controllers\KaosController;
+
+Route::get('/kaos', [KaosController::class, 'index']);
+Route::get('/kaos/tambah', [KaosController::class, 'tambah']);
+Route::post('/kaos/store', [KaosController::class, 'store']);
+Route::get('/kaos/edit/{id}', [KaosController::class, 'edit']);
+Route::post('/kaos/update', [KaosController::class, 'update']);
+Route::get('/kaos/hapus/{id}', [KaosController::class, 'hapus']);
+Route::get('/kaos/cari', [KaosController::class, 'cari']);
+Route::get('/kaos/view/{id}', [KaosController::class, 'view']);
+
 // Route::get('/pegawai/cari','PegawaiController@cari');
 
 
