@@ -24,16 +24,16 @@
         </tr>
         @foreach($karyawan as $k)
         <tr>
-            <td>{{ $k->kodekaryawan }}</td>
+            <td>{{ $k->kodepegawai }}</td>
             <td>{{ strtoupper($k->namalengkap) }}</td>
             <td>{{ $k->divisi }}</td>
             <td>{{ strtolower($k->departemen) }}</td>
             <td>
-                <a class="btn btn-success" href="/karyawan/view/{{ $k->kodekaryawan }}">View</a>
+                <a class="btn btn-success" href="/karyawan/view/{{ $k->kodepegawai }}">View</a>
                 |
-                <a class="btn btn-warning" href="/karyawan/edit/{{ $k->kodekaryawan }}">Edit</a>
+                <a class="btn btn-warning" href="/karyawan/edit/{{ $k->kodepegawai }}">Edit</a>
                 |
-                <a class="btn btn-danger" href="/karyawan/hapus/{{ $k->kodekaryawan }}">Hapus</a>
+                <a class="btn btn-danger" href="/karyawan/hapus/{{ $k->kodepegawai }}">Hapus</a>
             </td>
         </tr>
         @endforeach

@@ -14,7 +14,7 @@
             <!-- Kolom untuk Detail Karyawan -->
             <div class="col-md-8">
                 <div>
-                    <strong>Kode Karyawan:</strong> {{ $k->kodekaryawan }}
+                    <strong>Kode Karyawan:</strong> {{ $k->kodepegawai }}
                 </div>
                 <div>
                     <strong>Nama Lengkap:</strong> {{ $k->namalengkap }}

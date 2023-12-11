@@ -12,9 +12,9 @@
         <form action="/karyawan/update" method="post">
             {{ csrf_field() }}
             <div class="form-group row">
-                <label for="kodekaryawan" class="col-md-2 col-form-label">Kode Karyawan:</label>
+                <label for="kodepegawai" class="col-md-2 col-form-label">Kode Karyawan:</label>
                 <div class="col-md-10">
-                    <input name="kodekaryawan" class="form-control" id="kodekaryawan" placeholder="Masukkan Kode Karyawan" value="{{ $k->kodekaryawan }}" type="text" readonly>
+                    <input name="kodepegawai" class="form-control" id="kodepegawai" placeholder="Masukkan Kode Karyawan" value="{{ $k->kodepegawai }}" type="text" readonly>
                 </div>
             </div>
             <div class="form-group row">

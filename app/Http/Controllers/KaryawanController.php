@@ -23,15 +23,15 @@ class KaryawanController extends Controller
     {
         //Pesan Validasi
     $messages = [
-        'kodekaryawan.unique' => 'Maaf, kode karyawan sudah tersedia. Tolong gunakan kode yang berbeda.',
+        'kodepegawai.unique' => 'Maaf, kode karyawan sudah tersedia. Tolong gunakan kode yang berbeda.',
     ];
 
     // Validasi input
     $request->validate([
-        'kodekaryawan' => [
+        'kodepegawai' => [
             'required',
             'max:5',
-            Rule::unique('karyawan', 'kodekaryawan'),
+            Rule::unique('karyawan', 'kodepegawai'),
         ],
         'namalengkap' => 'required|max:50',
         'divisi' => 'required|max:20',
@@ -39,7 +39,7 @@ class KaryawanController extends Controller
     ], $messages);
 
     DB::table('karyawan')->insert([
-        'kodekaryawan' => $request->kodekaryawan,
+        'kodepegawai' => $request->kodepegawai,
         'namalengkap' => $request->namalengkap,
         'divisi' => $request->divisi,
         'departemen' => $request->departemen
@@ -51,13 +51,13 @@ class KaryawanController extends Controller
 
     public function edit($id)
     {
-        $karyawan = DB::table('karyawan')->where('kodekaryawan', $id)->get();
+        $karyawan = DB::table('karyawan')->where('kodepegawai', $id)->get();
         return view('editKaryawan', ['karyawan' => $karyawan]);
     }
 
     public function update(Request $request)
     {
-        DB::table('karyawan')->where('kodekaryawan', $request->kodekaryawan)->update([
+        DB::table('karyawan')->where('kodepegawai', $request->kodepegawai)->update([
             'namalengkap' => $request->namalengkap,
             'divisi' => $request->divisi,
             'departemen' => $request->departemen
@@ -68,7 +68,7 @@ class KaryawanController extends Controller
 
     public function hapus($id)
     {
-        DB::table('karyawan')->where('kodekaryawan', $id)->delete();
+        DB::table('karyawan')->where('kodepegawai', $id)->delete();
         return redirect('/karyawan');
     }
 
@@ -83,7 +83,7 @@ class KaryawanController extends Controller
 
     public function view($id)
     {
-        $karyawan = DB::table('karyawan')->where('kodekaryawan', $id)->get();
+        $karyawan = DB::table('karyawan')->where('kodepegawai', $id)->get();
         return view('viewKaryawan', ['karyawan' => $karyawan]);
     }
 }

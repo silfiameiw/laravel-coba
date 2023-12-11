@@ -22,9 +22,9 @@
         <form action="/karyawan/store" method="post">
             {{ csrf_field() }}
             <div class="form-group row">
-                <label for="kodekaryawan" class="col-md-2 col-form-label">Kode Karyawan:</label>
+                <label for="kodepegawai" class="col-md-2 col-form-label">Kode Karyawan:</label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" id="kodekaryawan" name="kodekaryawan" placeholder="Masukkan Kode Karyawan">
+                    <input type="text" class="form-control" id="kodepegawai" name="kodepegawai" placeholder="Masukkan Kode Karyawan">
                 </div>
             </div>
 
