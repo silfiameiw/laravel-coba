@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>@yiled('title')</title>
+    <title>@yiled('Silfia Mei - 5026221073')</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -21,11 +21,14 @@
 
             <!-- Links -->
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pegawai">Pegawai</a>
+                  </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/kaos">Kaos - Tugas PRA EAS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
+                <a class="nav-link" href="/karyawan">Karyawan - Soal EAS Kode DD</a>
               </li>
 
               <!-- Dropdown -->
@@ -35,8 +38,8 @@
                 </a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/pegawai">Pegawai</a>
-                  <a class="dropdown-item" href="#">Link 2</a>
-                  <a class="dropdown-item" href="#">Link 3</a>
+                  <a class="dropdown-item" href="/kaos">Kaos - Tugas Pra EAS</a>
+                  <a class="dropdown-item" href="/karyawan">Karyawan - Kode Soal DD</a>
                 </div>
               </li>
             </ul>
@@ -52,7 +55,12 @@
 
         @yield('isihalaman')
         <!-- bagian konten blog -->
-
+        <!-- Alert Section -->
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         @yield('konten')
 
 
@@ -60,7 +68,7 @@
         <br />
         <hr />
         <footer>
-            <p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>. 2018 - 2019</p>
+            <p>&copy; <a href="https://github.com/silfiameiw">Silfia Mei Wulandari</a>. 2023</p>
         </footer>
 
     </div>
